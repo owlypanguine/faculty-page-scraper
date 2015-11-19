@@ -1,8 +1,8 @@
 #This program searches through the faculty profiles at the University of Maryland's Department of Government and Politics 
 #website for user-inputted search words or phrases. 
 #The purpose is to help find faculty members whose research interests match your own.
-#The program outputs the number of results (faculty members with "interesting" profiles) found
-#and the links to their profile pages and other documents such as CVs where applicable.
+#The program outputs the number of results (faculty members with "interesting" profiles)
+#and the links to their profile pages, and other documents such as CVs where applicable.
 
 import urllib, re, time
 from bs4 import BeautifulSoup
