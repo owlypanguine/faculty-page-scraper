@@ -13,6 +13,7 @@ area = raw_input('Research Area?\n\n1 - American Politics\n2 - Methodology\n3 - 
 search = raw_input('Enter search word/phrase : ')
 position = raw_input('Filter out assistant and associate professors? y/n ')
 
+#code needs updating to catch invalid user input
 if area == '1': url = url_base + "?taxonomy_vocabulary_4_tid=10"
 elif area == '2': url = url_base + "?taxonomy_vocabulary_4_tid=61"
 elif area == '3': url = url_base + "?taxonomy_vocabulary_4_tid=62"
