@@ -9,11 +9,28 @@ from bs4 import BeautifulSoup
 
 url_base = 'http://www.gvpt.umd.edu/facultystaff/area'
 #url = raw_input('Enter URL: ')
-area = raw_input('Research Area?\n\n1 - American Politics\n2 - Methodology\n3 - Political Theory\n4 - Comparative Politics\n5 - International Relations\n\n')
-search = raw_input('Enter search word/phrase : ')
-position = raw_input('Filter out assistant and associate professors? y/n ')
 
-#code needs updating to catch invalid user input
+while True:
+    area = raw_input('Research Area?\n\n1 - American Politics\n2 - Methodology\n3 - Political Theory\n4 - Comparative Politics\n5 - International Relations\n\n')
+    if area in ["1", "2", "3", "4", "5"]: break
+    else: 
+        print "Invalid selection." 
+        continue
+
+while True:
+    search = raw_input('Enter search word/phrase : ')
+    if len(search) > 1: break
+    else:   
+        continue
+
+while True:
+    position = raw_input('Filter out assistant and associate professors? y/n ')
+    if position in ["y", "n"]:
+        break
+    else:
+        print "Invalid selection. Enter y or n."
+        continue
+        
 if area == '1': url = url_base + "?taxonomy_vocabulary_4_tid=10"
 elif area == '2': url = url_base + "?taxonomy_vocabulary_4_tid=61"
 elif area == '3': url = url_base + "?taxonomy_vocabulary_4_tid=62"
